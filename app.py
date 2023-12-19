@@ -76,3 +76,6 @@ def machineLearningMT(auth):
             'Input Text' : text
         }
         return jsonify(user_data), 203, {'Content-Type': 'application/json'}
+
+if __name__ == "__main__":
+            app.run()

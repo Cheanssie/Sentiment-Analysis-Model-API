@@ -64,8 +64,8 @@ class MLAnalysis:
         return " ".join([word for word in str(review).split() if word not in STOPWORDS])
 
     def analyze(self, text_review):
-        model = joblib.load('./Static/res/fyp_svm.pkl')
-        vectorizer = joblib.load('./Static/res/fyp_vectorizer.pkl')
+        model = joblib.load('static/res/fyp_svm.pkl')
+        vectorizer = joblib.load('static/res/fyp_vectorizer.pkl')
         abbr = Abbreviation()
         abbr.load_abbreviations()
         abbreviated = abbr.replace_abbreviations(text_review)

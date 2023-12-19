@@ -61,7 +61,7 @@ class LexiconAnalysis:
         return " ".join([word for word in str(review).split() if word not in STOPWORDS])
 
     def analyze(self, text_review):
-        SentiLexM = pd.read_csv('./Static/res/SentiLexM.txt', sep='\t', names=['Word', 'SentimentScore'])
+        SentiLexM = pd.read_csv('static/res/SentiLexM.txt', sep='\t', names=['Word', 'SentimentScore'])
         
         abbr = Abbreviation()
         abbr.load_abbreviations()
@@ -89,7 +89,7 @@ class LexiconAnalysis:
             return "Neutral"
         
     def analyzeMT(self, text_review):
-        SentiLexM = pd.read_csv('./Static/res/SentiLexM.txt', sep='\t', names=['Word', 'SentimentScore'])
+        SentiLexM = pd.read_csv('static/res/SentiLexM.txt', sep='\t', names=['Word', 'SentimentScore'])
         
         abbr = Abbreviation()
         abbr.load_abbreviations()
